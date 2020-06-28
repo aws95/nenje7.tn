@@ -1,3 +1,11 @@
+const routerBase =
+  process.env.DEPLOY_ENV === "GH_PAGES"
+    ? {
+        router: {
+          base: "/nenje7.tn/"
+        }
+      }
+    : {};
 export default {
   /*
    ** Nuxt rendering mode
@@ -87,5 +95,8 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
+  router: {
+    base: "/nenje7.tn/"
+  }
 };
